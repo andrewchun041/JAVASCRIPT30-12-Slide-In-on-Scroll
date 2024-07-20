@@ -24,8 +24,10 @@ function checkSlide() {
         // bottom of image
         const imageBottom = sliderImage.offsetTop + sliderImage.height;
 
+        // conditional statements
         const isHalfShown = slideInAt > sliderImage.offsetTop;
         const isNotScrolledPast = window.scrollY < imageBottom;
+        // add class active if conditions are met
         if (isHalfShown && isNotScrolledPast) {
             sliderImage.classList.add('active');
         } else {
